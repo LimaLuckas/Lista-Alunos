@@ -1,6 +1,5 @@
 package br.edu.ifpb.alunoslista;
 
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,11 +21,14 @@ public class ListViewActivity extends AppCompatActivity implements OnItemClickLi
      List <String> alunos = new ArrayList<>();
      ListView listview;
      ArrayAdapter<String> adapter;
+     Button botaoAdicionar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_listview);
+
+        //Questão um
 
         alunos.add("João");
         alunos.add("Maria");
@@ -39,15 +41,18 @@ public class ListViewActivity extends AppCompatActivity implements OnItemClickLi
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,alunos);
 
         listview = (ListView) findViewById(R.id.listaAlunos);
+        listview.setAdapter(adapter);
 
-        Button botaoAdicionar = findViewById(R.id.botaoAdicionar);
+        botaoAdicionar = findViewById(R.id.botaoAdicionar);
         botaoAdicionar.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        //Método de resposta ao clique do botao adicionar
+        //Método para adicionar um aluno ao clique do botao adicionar
+
+        //Questao dois
 
         Log.i("List View","voce clicou no botão");
         EditText alunosEditText = findViewById(R.id.caixaTextoAlunos);

@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#0cf">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Lista de Alunos"
+        android:textColor="#fff"
+        android:textSize="50sp"/>
 
 </LinearLayout>
